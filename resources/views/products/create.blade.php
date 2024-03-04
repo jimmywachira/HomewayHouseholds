@@ -1,5 +1,15 @@
-<x-layout>
-  <x-slot >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Products</title>
+</head>
+<body class="font-bold capitalize p-2 m-2" style="font-family:Jost;">
+
     <div class="">
   <div class="sm:mx-auto sm:w-full sm:max-w-sm">
     <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
@@ -38,5 +48,5 @@
   </form>
 </div>
 </div>
-
-</x-layout>
+</body>
+</html>
