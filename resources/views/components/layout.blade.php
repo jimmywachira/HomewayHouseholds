@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full bg-white">
+<!doctype html>
+<html lang="en" class="h-full bg-gray-100">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Products</title>
+    <title>homewayHouseholds</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
 </head>
-<body class="font-semibold h-full capitalize" style="padding:auto;font-family:Dosis">
-    
+<body class="h-full bg-white text-transform capitalize font-semibold items-center leading-6" style="font-family:quicksand">
+
+  {{ require_once (resource_path("views/components/nav.blade.php")); }}
   {{ $content }}
 
 </body>

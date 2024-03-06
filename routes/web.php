@@ -20,8 +20,11 @@ Route::get('/', function(){ return view('home');});
 Route::get('/about', function(){ return view('about');});
 
 Route::get('/products', [ProductsController::class, 'index']);
-Route::post('/product', [ProductsController::class, 'store']);
+Route::post('/products', [ProductsController::class, 'store']);
 Route::get('/product/create', [ProductsController::class, 'create']);
+
+Route::post('/cart', [ProductsController::class, 'cart']);
+Route::get('/cart', [ProductsController::class, 'cart']);
 
 Route::get('/customers', [CustomerController::class, 'index']);
 Route::get('/customers', [CustomerController::class, 'search']);

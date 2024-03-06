@@ -25,6 +25,9 @@
                 </div>
             </div>
             </div>
+            <div class="p-2">
+                <img class="h-14 w-14" src="https://api.dicebear.com/7.x/adventurer/svg?seed=coco" alt="myCompany">
+              </div>
         </div>
     </x-slot>
 </x-layout>

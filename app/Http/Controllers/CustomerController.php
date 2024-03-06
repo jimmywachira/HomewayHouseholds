@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class CustomerController extends Controller
 {
     public function index(){
-        $customers = Customer::where('active',1)->get();
+        $customers = Customer::all();
         return view('customer.index', compact('customers'));
     }
 
@@ -42,7 +42,6 @@ class CustomerController extends Controller
     }
 
     public function destroy(Customer $customer){
-
         $customer->delete();
         return redirect('/customers');
     }
