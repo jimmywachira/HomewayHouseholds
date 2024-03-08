@@ -1,7 +1,7 @@
         @csrf
         <div class="p-2 m-2">
             <label for="name">name</label>
-            <input class="p-2 m-2 border border-black-600 rounded" type="text" name="name" autocomplete="off" value="{{ old('name') ?? $customer->name }}" >
+            <input class="p-2 m-2 border border-black-600 rounded" type="text" name="name" autocomplete="off" value="{{ old('name') ?? $product->name }}" >
             <div class="text-red-600">
                 @error('name') <p>{{ $message }}</p> @enderror
             </div>  

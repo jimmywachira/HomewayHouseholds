@@ -7,24 +7,9 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-
-    public function cart(Product $productId){
-        $products = Product::where('name',$productId)->get();
-        return view('products.cart', compact('productId','products'));
-    }
-
     public function index(){
         $products = Product::all();
         return view('products.index', compact('products'));
-    }
-
-    public function storee(){
-        $product = new Product();
-        $product->name = request('name');
-        $product->price = request('price');
-        $product->details = request('details');
-        $product->save();
-        return redirect('/products');
     }
 
     public function create(){
@@ -36,22 +21,27 @@ class ProductsController extends Controller
         return redirect('/products');
     }
 
-    public function show(Product $Product){
-        #$Product = Product::findOrFail($ProductId); #use route model bidding instead
-        return view('product.show', compact('Product'));
+    public function show(Product $product){
+        #$product = Product::findOrFail($ProductId); #use route model bidding instead
+        return view('products.show', compact('product'));
+    }
+
+    public function showCart(Product $product){
+        #$products = Product::findOrFail($product); #use route model bidding instead
+        return view('products.cart', compact('product'));
     }
 
     public function edit(Product $Product){
-        return view('product.edit', compact('Product'));
+        return view('product.edit', compact('product'));
     }
 
-    public function update(Product $Product){
-        $Product->update($this->validatedData());
+    public function update(Product $product){
+        $product->update($this->validatedData());
         return redirect('/Products');
     }
 
-    public function destroy(Product $Product){
-        $Product->delete();
+    public function destroy(Product $product){
+        $product->delete();
         return redirect('/Products');
     }
 
@@ -64,7 +54,7 @@ class ProductsController extends Controller
     }
 
     public function search(Product $product){
-        $Products = Product::where('name',$product)->get();
-        return view('product.index', compact('Products'));
+        $Products = Product::where('name', $product)->get();
+        return view('product.index', compact('products'));
     }
 }
