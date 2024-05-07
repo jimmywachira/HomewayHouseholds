@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Models\Product;
-
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -26,11 +25,6 @@ class ProductsController extends Controller
         return view('products.show', compact('product'));
     }
 
-    public function showCart(Product $product){
-        #$products = Product::findOrFail($product); #use route model bidding instead
-        return view('products.cart', compact('product'));
-    }
-
     public function edit(Product $Product){
         return view('product.edit', compact('product'));
     }
@@ -49,12 +43,12 @@ class ProductsController extends Controller
         return request()->validate([
             'name' => 'required',
             'price' => 'required',
-            'details'=> 'required'
+            'details' => 'required'
         ]); 
     }
 
     public function search(Product $product){
-        $Products = Product::where('name', $product)->get();
+        $products = Product::where('name', $product)->get();
         return view('product.index', compact('products'));
     }
 }

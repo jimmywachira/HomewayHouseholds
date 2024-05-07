@@ -1,18 +1,16 @@
 <x-layout>
     <x-slot name="content">
-        <section class="grid gap-8 md:grid-cols-2 md:items-center md:text-left">
+        <section class="grid gap-8 lg:grid-cols-2 md:items-center md:text-left">
             <div>
-               <img class="w-full m-2 rounded-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="">
+               <img class="w-full" src="https://flowbite.com/docs/images/blog/image-3.jpg" alt="">
             </div>
 
-            <div >
-                <h1 class="text-4xl text-center font-medium mb-2">HomeswayHouseholds</h1>
-                <div class="">
-                    <h2 class="text-center mb-2">Shop for Quality Pre-Loved Treasures</h2>
-                    <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam cum incidunt pariatur dicta quae repellat vel,
-                    doloremque fuga natus quidem nesciunt commodi quisquam quod autem voluptatem cupiditate quas impedit hic!
-                    </p>
+            <div>
+                <div>
+                    <h1 class="text-4xl text-center font-medium mb-2">HomeswayHouseholds</h1>
+                    <div class="bg-blue-600 flex p-12 m-2 md:p-14 lg:p16 xl:p-20 text-black text-3xl items-center justify-center">
+                    <p> Quotes from satisfied customers: Share positive feedback about their experience shopping at Homeway Households </p>
+                </div>
                 </div>
             </div>
         </section>

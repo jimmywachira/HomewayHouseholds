@@ -12,11 +12,6 @@ class CustomerController extends Controller
         return view('customer.index', compact('customers'));
     }
 
-    public function search(Customer $customer){
-        $customers = Customer::where('name',$customer)->get();
-        return view('customer.index', compact('customers'));
-    }
-
     public function create(){
         $customer = new Customer();
         return view('customer.create', compact('customer'));
@@ -51,5 +46,10 @@ class CustomerController extends Controller
             'name' => 'required',
             'email' => 'required | email'
         ]); 
+    }
+    
+    public function search(Customer $customer){
+        $customers = Customer::where('name',$customer)->get();
+        return view('customer.index', compact('customers'));
     }
 }

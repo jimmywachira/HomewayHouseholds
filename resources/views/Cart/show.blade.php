@@ -22,5 +22,5 @@
         </form>
 
     </div>
-</body>
-</html>
+ </x-slot>
+</x-layout>

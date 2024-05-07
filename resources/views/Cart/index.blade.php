@@ -1,16 +1,18 @@
 <x-layout>
     <x-slot name='content'>
-    <h1 class="text-center text-2xl">product cart</h1>
-
+    <h1 class="text-center text-2xl">item cart</h1>
     <div class="card p-2 m-2">
-        @forelse($products as $product)
-            <ul class="mb-2">
-                <img class="w-full" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="">
-                <li class="text-center mt-2">name : <a href="/customers/{{ $product->id }}"> {{ $product->name }}</a></li>
-                <li class="text-center mt-2">email : {{ $product->email }}</li>
+        @forelse($items as $item)
+            <ul class="mb-2 border border-black">
+                <li class="p-2 m-2">
+                    <img class="justify-item-center p-2 m-2 h-20 w-20 rounded-full ring-2 ring-black" src="https://tailwindui.com/img/logos/mark.svg?color=black&shade=400" alt="">
+                </li>
+                <li class="text-center mt-2">name : <a href="/cart/ {{-- {{ $item->name }} --}} "> glasses </a></li>
+                <li class="text-center mt-2">details :{{-- {{ $item->details }} --}} luminac </li>
+                <li class="text-center mt-2">price : {{ 500 }}</li>
             </ul>
         @empty
-            <p>no cart to show</p>
+            <p> no cart to show </p>
         @endforelse
     </div>
 
